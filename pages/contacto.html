@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="shortcut icon" href="../multimedia/pulpostrorelogo.svg">
+    <link rel="stylesheet" href="../style/style.css">
+
+</head>
+<body>
+     <!--Inicio Header-->
+     <header>
+        <section class="header">
+            <img class="header__logo" src="../multimedia/PulpoStroreLogo.svg"alt= "logo">
+            <article class="header__social">
+                <div class="header__ig">
+                <a href="https://www.instagram.com/?hl=es-la"><img src="../Multimedia/Ig Icon.svg" alt="Instagram"></a>
+                </div>
+                <div class="header__wapp">
+                    <a href="https://web.whatsapp.com/"><img src="../Multimedia/WA Icon.svg" alt="Whatsapp"></a>
+                </div>
+            </article>         
+        </section>
+        <div>
+            <Nav >
+                <Ul class="menu">
+                    <li class="menu__li"><a href="../index.html">Inicio</a></li>
+                    <li class="menu__li"><a href="./productos.html">Productos</a></li>
+                    <li class="menu__li"><a href="./shoetester.html">Shoe Tester</a></li>
+                    <li class="menu__li"><a href="./preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li class="menu__li"><a href="./contacto.html">Contacto</a></li>
+                </Ul>
+            </Nav>
+        </div>         
+    </header>
+
+<!--Fin Header--> 
+    </header>
+    <main class="principal">
+        <section class="contacto">
+            <article class="contacto__info">
+                <h1 class="contacto__info__title">Contacto</h1>
+                <h2 class="contacto__info__data">INSTAGRAM: @PulpoStoreShoes</h2>
+                <h2 class="contacto__info__data">WHATSAPP: 2219999999</h2>
+                <h2 class="contacto__info__data">MAIL: PulpoStoreShoes@mail.com</h2>
+            </article> 
+            <article class="formulario">
+                <h1 class="formulario__title">Envianos tu consulta</h1>
+                <form action="./index.js" method="get">
+                    <input class="form__item" type="text" name="nombre" placeholder="Ingresa tu Nombre" required>
+                    <input class="form__item" type="email" name="email" placeholder="Ingresa tu Mail" required>
+                    <input class="form__item" type="tel" name="telefono" placeholder="Ingresa tu Telefono" required>
+                    
+                    <label class="form__item" for="tipo_consulta">Tipo de Consulta:</label>
+                    <select id="tipo_consulta" name="tipo_consulta">
+                    <option class="form__item"value="consulta">Consulta</option>
+                    <option class="form__item"value="reclamo">Reclamo</option>
+                    <option class="form__item"value="compra">Compra</option>
+                    </select>
+                    
+                    <textarea class="form__item" name="message" id="message" cols="30" rows="10" placeholder="Escriba su Consulta"></textarea>
+
+                    <input class="button" type="submit" value="Enviar">
+                </form>
+            </article>
+        </section>
+    </main>    
+    <footer><!--Inicio footer-->
+        <section class="footer">
+            <Ul class="footer__nav">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./shoetester.html">Shoe Tester</a></li>
+                <li><a href="./preguntasfrecuentes.html">Preguntas Frecuentes</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </Ul>
+        
+            <img class="footer__marca" src="../multimedia/pulpostoremarca.svg" alt="Marca">
+            <article class="footer__social">
+                <div>
+                    <a href="https://www.instagram.com/?hl=es-la"><img src="../multimedia/ig icon.svg" alt="Instagram"></a>
+                </div>
+                <div>
+                    <a href="https://web.whatsapp.com/"><img src="../multimedia/wa icon.svg" alt="Whatsapp"></a>
+                </div>
+            </article>
+        </section>   
+        <div class="copyright">
+                <p>Copyright © 2022 |Octopus Store | Diseñado y desarrollado por VASKO</p>
+        </div>        
+    </footer>
+</body>
+</html>
