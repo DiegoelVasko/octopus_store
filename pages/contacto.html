@@ -23,17 +23,22 @@
                 </div>
             </article>         
         </section>
-        <div>
-            <Nav >
-                <Ul class="menu">
+        <nav id="hamnav">
+            <!-- (B) THE HAMBURGER -->
+            <label class="hamburger" for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger" />
+  
+            <!-- (C) MENU ITEMS -->
+            <div id="hamitems">
+              <Ul class="menu">
                     <li class="menu__li"><a href="../index.html">Inicio</a></li>
                     <li class="menu__li"><a href="./productos.html">Productos</a></li>
                     <li class="menu__li"><a href="./shoetester.html">Shoe Tester</a></li>
                     <li class="menu__li"><a href="./preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
                     <li class="menu__li"><a href="./contacto.html">Contacto</a></li>
-                </Ul>
-            </Nav>
-        </div>         
+                </Ul>            
+            </div>
+        </Nav>         
     </header>
 
 <!--Fin Header--> 
@@ -41,26 +46,29 @@
     <main class="principal">
         <section class="contacto">
             <article class="contacto__info">
-                <h1 class="contacto__info__title">Contacto</h1>
-                <h2 class="contacto__info__data">INSTAGRAM: @PulpoStoreShoes</h2>
-                <h2 class="contacto__info__data">WHATSAPP: 2219999999</h2>
-                <h2 class="contacto__info__data">MAIL: PulpoStoreShoes@mail.com</h2>
+                <h2 class="contacto__info__title">Contacto</h2>
+                <h3 class="contacto__info__data">INSTAGRAM: </h3>
+                <p>@PulpoStoreShoes</p>
+                <h3 class="contacto__info__data">WHATSAPP: </h3>
+                <p>2219999999</p>
+                <h3 class="contacto__info__data">MAIL:</h3>
+                <p> PulpoStoreShoes@mail.com</p>
             </article> 
             <article class="formulario">
-                <h1 class="formulario__title">Envianos tu consulta</h1>
+                <h2 class="formulario__title">Envianos tu consulta</h2>
                 <form action="./index.js" method="get">
                     <input class="form__item" type="text" name="nombre" placeholder="Ingresa tu Nombre" required>
                     <input class="form__item" type="email" name="email" placeholder="Ingresa tu Mail" required>
                     <input class="form__item" type="tel" name="telefono" placeholder="Ingresa tu Telefono" required>
-                    
-                    <label class="form__item" for="tipo_consulta">Tipo de Consulta:</label>
+ 
+                    <label for="tipo_consulta">Tipo de Consulta:</label>
                     <select id="tipo_consulta" name="tipo_consulta">
-                    <option class="form__item"value="consulta">Consulta</option>
-                    <option class="form__item"value="reclamo">Reclamo</option>
-                    <option class="form__item"value="compra">Compra</option>
+                    <option class="consulta__option"value="consulta">Consulta</option>
+                    <option class="consulta__option"value="reclamo">Reclamo</option>
+                    <option class="consulta__option"value="compra">Compra</option>
                     </select>
                     
-                    <textarea class="form__item" name="message" id="message" cols="30" rows="10" placeholder="Escriba su Consulta"></textarea>
+                    <textarea  name="message" id="message" cols="30" rows="10" placeholder="Escriba su Consulta"></textarea>
 
                     <input class="button" type="submit" value="Enviar">
                 </form>
