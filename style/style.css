@@ -1,6 +1,6 @@
 :root {
     /*colors*/
-    --color-text: #f4772a;
+    --color-text: rgb(244, 119, 42);
     --color-base: rgb(196, 196, 196, 0.6);
     --color-primary:rgb(172, 191, 164, 1);
     --color-secondary:rgb(23, 126, 137, 0.9);
@@ -44,7 +44,7 @@ body{
 /*style-header*/
 header{
     
-    background-image: url(../Multimedia/fondo_header1.svg);
+    background-image: url(../multimedia/fondo_header1.svg);
     opacity: 1;
     background-position: center;
     background-repeat: no-repeat;
@@ -101,7 +101,7 @@ a{
 /*fin-header*/
 /*inicio-main*/
 .principal{
-    background-image: url(../Multimedia/main3.jpg);
+    background-image: url(../multimedia/main3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -111,7 +111,8 @@ h1{
     font-weight: bolder;
     font-size: var(--text-large);
     text-decoration-line: underline ;
-    padding: var(--spacing-large);
+    margin: 0 auto;
+    
 }
 h2{
     text-decoration-line: underline;
@@ -203,7 +204,7 @@ span{
 }    
 .index__title{
     font-size: var(--text-medium);
-    padding-left: var(--spacing-large);    
+     
 }
 .index__productos{
     grid-area: productos;
