@@ -1,11 +1,11 @@
 :root {
     /*colors*/
-    --color-text: rgb(244, 119, 42);
-    --color-base: rgb(196, 196, 196, 0.6);
-    --color-primary:rgb(172, 191, 164, 1);
-    --color-secondary:rgb(23, 126, 137, 0.9);
-    --color-section:rgb(65, 65, 65);
-    --color-article: rgba(65, 65, 65, 0.8);
+    --color-text: #f4772a;
+    --color-base: #c4c4c499;
+    --color-primary:#acbfa4;
+    --color-secondary:#177e89e6;
+    --color-section:#414141;
+    --color-article: #414141cc;
 
     /*spacing*/
     --spacing-xsmall: 1rem;
@@ -16,6 +16,7 @@
     /*font-family*/
     --font-principal: 'Signika', sans-serif ;    
     --font-secondary: 'Times New Roman', Times, serif;
+    --font-h1: 'Acme', sans-serif;
 
     /*font-size*/
     --text-large: 4.8em;
@@ -68,6 +69,12 @@ header{
     align-items: center;
     margin-right: var(--spacing-small);
     flex-basis: 20%; 
+}    
+.header__ig{
+    animation: jello-horizontal 0.9s 1.2s both;
+}
+.header__wapp{
+    animation: jello-horizontal 0.9s 1.2s both;
 }
 .hamburger{
     display: none;
@@ -82,10 +89,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    border-bottom: #F4772A ;
-    border-top: #F4772A ;
-    border-top-style: inset;
-    border-bottom-style: inset;
+   
 }
 a{
     text-decoration: none;
@@ -95,24 +99,38 @@ a{
 .menu__li{
     font-size: var(--text-medium);     
     list-style-type: none;
-    
+    transition: all .2s ease-in-out;
+}
+.menu__li:hover{
+    font-size: 3.6em;
+    letter-spacing: 0.1rem;
+    border-left: #F4772A;
+    border-right: #F4772A;
+    border-left-style: inset;
+    border-right-style: inset;
+    padding: 0 .5rem;
 }
 
 /*fin-header*/
 /*inicio-main*/
 .principal{
-    background-image: url(../multimedia/main3.jpg);
+    /*background-image: url(../multimedia/main3.jpg);*/
+    background-image: url(../multimedia/low-poly-grid-haikei.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 h1{
-    color: var(--color-text);
+    color: var(--color-secondary);
     font-weight: bolder;
     font-size: var(--text-large);
-    text-decoration-line: underline ;
-    margin: 0 auto;
+    text-align: center;
+    font-family: var(--font-h1);
+    padding: var(--spacing-large);
+    text-shadow: 5px 5px 10px var(--color-article);
+    animation: tracking-in-contract .8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
     
+
 }
 h2{
     text-decoration-line: underline;
@@ -143,7 +161,6 @@ span{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    
     height: 19rem;
     background-color: var(--color-section);
        
@@ -153,19 +170,27 @@ span{
     flex-direction: column;
     justify-content: space-evenly;
     list-style-type: none;
-    text-decoration: none;
-    color: var(--font-principal);
+}
+.footer__nav li{    
     font-size: var(--text-base);
+    text-decoration:1px underline  var(grey);
+    transition: all .1s;
+}
+.footer__nav li:hover{
+    text-decoration:1px underline #F4772A;
 }
 .footer__marca{
     width: 30%;
 }
 .copyright{
+    height: 1rem;
     background-color: var(--color-section);
-    text-align: center;
     color: var(--color-primary);
     font-family: var(--font-secondary);
+    animation: traslate 15s infinite ease-in-out  0s ;
+    overflow: hidden;
 }
+
 /*final-footer*/
 
 
@@ -190,17 +215,18 @@ span{
     background-color: var(--color-secondary);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding:var(--spacing-small);
-    color: var(--color-primary);
     border-radius: 12px;
     border: var(--color-text) 2pt solid;
   
 }
-
-
+.saludo__title{
+    color: var(--color-primary);
+}
 .saludo__content{
     font-size: var(--text-medium);
+    color: var(--color-primary);
 }    
 .index__title{
     font-size: var(--text-medium);
@@ -241,7 +267,7 @@ span{
     width: 15rem;
     margin-right: var(--spacing-xsmall);
     padding: .5rem 2rem;
-
+    
 }
 .index__productos__art__title{
     font-size: var(--text-base);
@@ -458,7 +484,9 @@ form input{
     border: var(--color-text) 2pt solid;
     color: var(--color-primary);
     font-size: var(--text-base);
-}
+    animation: fade-in-bottom 1s 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}   
 .calzado_img{
     display: flex;
     overflow: auto;
@@ -803,5 +831,62 @@ li img{
         height: 25rem ;
         width: 23rem;
     }
-   
+
 }
+   /*Keyframes*/
+
+   @keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-bottom {
+    0% {
+      transform: translateY(90px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes jello-horizontal {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+ @keyframes traslate {
+    0% {
+        padding-left: 0%;
+    }     
+    100%{
+        padding-left: 100%;
+    }
+ }
