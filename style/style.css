@@ -40,7 +40,6 @@ html{
 body{
     font-family: var(--font-principal);
     font-variant: small-caps;
-    
 }
 /*style-header*/
 /*header nav{*/
@@ -62,11 +61,12 @@ body{
     width: 20%;
     margin: 1rem 5rem;
 }
-.navbar-toggler{
+.navbar-toggler-icon{
     height: 3rem;
     width: 4rem;
-    margin-right: 5rem;
-    background-image: linear-gradient(
+    margin-right: 3rem;
+    background-image: url(../multimedia/menu-burger-icon.svg);
+    /*background-image: linear-gradient(
         100deg,
         hsl(4deg 85% 57%) 0%,
         hsl(9deg 88% 58%) 11%,
@@ -78,14 +78,18 @@ body{
         hsl(31deg 96% 60%) 78%,
         hsl(33deg 96% 61%) 89%,
         hsl(36deg 96% 62%) 100%
-      );
+      );*/
 }
 #offcanvasNavbar{
-    background-color: var(--color-base);
+    background-color: var(--color-article);
 }
 .offcanvas-title{
     color: var(--color-secondary);
+    text-decoration: none;
+    font-size: var(--text-medium);
+    line-height: 0.5rem;
 }
+
 .offcanvas-header{
     display: flex;
     flex-direction: column;
@@ -95,43 +99,26 @@ body{
 .btn-close{
     margin: 0 auto;
 }
-#offcanvasNavbarLabel{
+.menu__li a{
     font-size: var(--text-medium);
-}    
+    color: var(--color-primary);
+}   
 
-.menu{
-    margin-top: var(--spacing-xsmall);
-    background: var(--section);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-   
+.social img{
+
+    width: 30%;
+    height: 30%;
+    padding: var(--spacing-medium);
 }
-a{
-    text-decoration: none;
-    background: transparent;
-    color: var(--color-text);
-}
-.menu__li{
-    font-size: var(--text-medium);     
-    list-style-type: none;
-    transition: all .2s ease-in-out;
-}
-/*.menu__li:hover{
-    font-size: 3.6em;
-    letter-spacing: 0.1rem;
-    border-left: #F4772A;
-    border-right: #F4772A;
-    border-left-style: inset;
-    border-right-style: inset;
-    padding: 0 .5rem;
-}*/
+
 
 /*fin-header*/
+
+
 /*inicio-main*/
 .principal{
-    /*background-image: url(../multimedia/main3.jpg);*/
-    background-image: url(../multimedia/low-poly-grid-haikei.svg);
+    background-image: url(../multimedia/main3.jpg);
+   
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -175,7 +162,7 @@ span{
 .footer{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     height: 19rem;
     background-color: var(--color-section);
@@ -186,18 +173,21 @@ span{
     flex-direction: column;
     justify-content: space-evenly;
     list-style-type: none;
+    
 }
-.footer__nav li{    
+.link-footer{    
+    color: var(--color-text);
     font-size: var(--text-base);
-    text-decoration:1px underline  var(grey);
-    transition: all .1s;
+    text-decoration:none;
+    transition: all .2s;
 }
 .footer__nav li:hover{
-    text-decoration:1px underline #F4772A;
+    text-decoration : 2px underline #F4772A;
 }
 .footer__marca{
     width: 30%;
 }
+
 .copyright{
     height: 1rem;
     background-color: var(--color-section);
@@ -205,6 +195,16 @@ span{
     font-family: var(--font-secondary);
     animation: traslate 15s infinite ease-in-out  0s ;
     overflow: hidden;
+}
+.footer__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.footer__social img{
+     height: 120%;  
+     padding: var(--spacing-medium);         
 }
 
 /*final-footer*/
@@ -217,7 +217,7 @@ span{
      "saludo saludo"
      "productos tester"
      "stars stars";
-    grid-template-columns: 4fr 3fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 4fr 1fr;
     column-gap: var(--spacing-large);
     row-gap: var(--spacing-medium);
@@ -243,9 +243,10 @@ span{
 .saludo__content{
     font-size: var(--text-medium);
     color: var(--color-primary);
-}    
-.index__title{
-    font-size: var(--text-medium);
+}
+.index__title a{
+    font-size: var(--text-base);
+    color: var(--color-text);
      
 }
 .index__productos{
@@ -264,20 +265,17 @@ span{
     border-radius: 12px;
     border: var(--color-text) 2pt solid;
 }
-.index__productos__title{
-    text-decoration: none;
-    color: #F4772A;
-}
+
 .index__productos__art{
     background-color: var(--color-secondary) ;
-   
     border-radius: 12px;
     border: var(--color-text) 2pt solid;   
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: var(--spacing-xsmall);
-    margin: var(--spacing-xsmall);
+    margin-bottom: var(--spacing-xsmall);
+    
 }
 .index__productos img{
     width: 15rem;
@@ -287,7 +285,8 @@ span{
 }
 .index__productos__art__title{
     font-size: var(--text-base);
-    color: var(--color-primary);  
+    color: var(--color-primary);
+    margin: 0 auto;  
 }
 .index__tester__art{
     background-color: var(--color-secondary) ;
@@ -337,7 +336,7 @@ span{
 .contacto{
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    gap: var(--spacing-small);
     justify-content: space-around;
     padding: var(--spacing-large);
     
@@ -352,12 +351,22 @@ span{
     font-size: var(--text-medium);
     
 }
+.contacto__info{
+    height: fit-content;
+    animation: fade-in-bottom 1s 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.card{
+    --bs-card-border-color:none;
+
+}
 .card-body{
     background-color: var(--color-secondary);
     padding: var(--spacing-xsmall);
     border-radius: 12px;
     border: var(--color-text) 2pt solid;
     color: var(--color-primary);
+    margin: var(--spacing-medium) 0;
+
 }
 .contacto__info h3{
     margin: var(--spacing-medium);
@@ -368,11 +377,14 @@ span{
     margin: var(--spacing-medium) var(--spacing-large);
     
 }
+.formulario{
+    animation: fade-in-bottom 1s 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
 form{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    height: 60rem;
+    grid-template-rows: repeat(9, 1fr);
+    
    
 }
 .form__item{
@@ -419,7 +431,7 @@ form label{
 }
 #message{
     grid-column: 1 / 5;
-    grid-row: 5 / 12;
+    grid-row: 5 / 9;
     margin-top: var(--spacing-small);
     background-color: var(--color-secondary);
     border: #F4772A 2pt solid;
@@ -434,7 +446,7 @@ form label{
 }
 form input{
     grid-column: 4 / 5;
-    grid-row: 12 / 13;
+    grid-row: 9 / 10;
 
 }
 /*final-estilo-contacto*/
@@ -449,7 +461,8 @@ form input{
      "compra compra talles"
      "pagos envio talles"
      "cambios cambios talles" 
-     "cambios cambios talles"
+     "cambios cambios talles";
+     animation: fade-in-bottom 1s 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; 
 }
 
 .preguntas h1{
@@ -473,8 +486,8 @@ form input{
 .preguntas article{
     
     background-color: var(--color-secondary);
-    padding: var(--spacing-medium);
-    margin: var(--spacing-small);
+    padding: var(--spacing-xsmall);
+    margin: var(--spacing-xsmall);
     border-radius: 12px;
     border: var(--color-text) 2pt solid;
     color: var(--color-primary);
@@ -484,7 +497,7 @@ form input{
 .talles{
        
     overflow: auto;
-    max-height: 80rem;
+    max-height: 100rem;
 }
 .tabla{
     height: 35rem ;
@@ -497,33 +510,22 @@ form input{
 .productos{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-bottom: var(--spacing-xsmall);
+
 }
 .calzado{
-    
+    width: 92%;
     background-color: var(--color-secondary);
     padding: var(--spacing-xsmall);
-    margin: var(--spacing-xsmall);
+    margin: 0.5rem auto 0;
+    
     border-radius: 12px;
     border: var(--color-text) 2pt solid;
     color: var(--color-primary);
     font-size: var(--text-base);
     animation: fade-in-bottom 1s 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
 }   
-/*.calzado_img{
-    display: flex;
-    overflow: auto;
-    gap: var(--spacing-xsmall);
-    margin-left: var(--spacing-medium);
-    margin-bottom: var(--spacing-small);
-    max-width: 35rem;
-}*/
 
-.carousel-item{
-    width: 40rem;
-    
-
-}
 span.carousel-control-prev-icon{
     background-image: url(../multimedia/chevron-left.svg) ;
 }
@@ -537,7 +539,7 @@ span.carousel-control-next-icon{
     font-weight: bolder;
     font-style: italic;
     text-decoration-line: underline;
-    margin-bottom: var(--spacing-xsmall);
+    padding-bottom: 0;
 }
 .calzado p{
     margin-top: var(--spacing-small);
@@ -557,12 +559,13 @@ span.carousel-control-next-icon{
 /*estilo-tester*/
 .shoetester{
     display: grid;
-    grid-template-columns: repeat(5 , 1fr);   
-}
-#tester{
-    grid-column: 1/6;
+    grid-template-columns: 1fr 1fr;
+    --bs-gutter-x: 0;
+    animation: fade-in-bottom 1s 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      
 }
 .tester{
+    width: 95%;
     display: flex;
     flex-direction: row;    
     padding: var(--spacing-xsmall);
@@ -570,31 +573,11 @@ span.carousel-control-next-icon{
     background-color: var(--color-secondary);
     border-radius: 12px;
     border: var(--color-text) 2pt solid;
-}
-.tester:nth-of-type(1){
-    grid-column:2 / 56 ;
-}    
-.tester:nth-of-type(2){
-    grid-column: 1 / 5;
-}    
-.tester:nth-of-type(3){
-    grid-column:2 / 6 ;
-}    
-.tester:nth-of-type(4){
-    grid-column: 1 / 5;
-}    
-.tester:nth-of-type(5){
-    grid-column: 2 / 6;
-}    
-.tester:nth-of-type(6){
-    grid-column: 1/5;
-}    
-.tester:nth-of-type(7){
-    grid-column: 2/6;
-}    
-.tester__iframe{
-    padding: var(--spacing-small);
-}
+}.card{
+    background-color: var(--color-secondary);
+
+}  
+
 .tester__content{
     padding: var(--spacing-small);
     line-height : 1.7;
@@ -616,18 +599,14 @@ span.carousel-control-next-icon{
     }
     
     /*index*/
-    .principal__index{
-        display: block;
-        padding-bottom: var(--spacing-medium);
+    .index__productos__art{
+        flex-direction: row;
+        justify-content: space-evenly;
     } 
-    .index__productos{
-        margin-bottom: var(--spacing-small);
-        padding-bottom: var(--spacing-small);
-    } 
-    .index__productos a{
+    .index__productos .button{
         display: none;
     } 
-    .index__tes a{
+    .index__tester .button{
         display: none;
     }
     .stars__img{
@@ -647,17 +626,18 @@ span.carousel-control-next-icon{
 
 @media screen and (max-width: 768px) {
     /*header*/
-    .header__social{
-        display: none;
-    }
+  
   
     /*index*/
-    .index__productos__art{
-        display: block
+
+    .principal__index{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: var(--spacing-small);
     }
-    .index__tester__art{
-        display: block
-    }
+  
+    
     .button{
         float: none;
     }
@@ -665,6 +645,12 @@ span.carousel-control-next-icon{
        display:none; 
 
     }
+    /*preguntas*/
+    .talles{
+        max-height: 150rem;
+
+    }
+
     
     /*contacto*/
     .contacto{
@@ -688,10 +674,7 @@ span.carousel-control-next-icon{
         font-size: .5em;
     }
         /*productos*/
-    .productos{
-        display: block;
-        
-    }
+
      /*tester*/
      .shoetester{
         display: flex;
@@ -714,23 +697,28 @@ span.carousel-control-next-icon{
     }
 }
 @media screen and (max-width: 480px) {
+    /*header*/
+    .navbar-toggler-icon{
+        height: 1.5rem;
+        width: 2rem;
+        margin-right: 1.5rem;
+        
+    }
+
     /*footer*/
     .footer{
         height: 25rem;
         flex-direction: column;
-
-        
+   
     }
     .footer__nav{
-               
         font-size: var(--text-xsmall);
-
     }
-    .footer__social {
-        display: flex;
+    .footer__social{
         flex-direction: row;
-        
     }
+        
+  
 
     /*index*/
     .principal{
@@ -775,15 +763,11 @@ span.carousel-control-next-icon{
     
 
     /*productos*/
-    .calzado_img{
-        margin-left: .5rem;
-        max-width: 25rem;
+    .productos{
+        display: block;
+        
     }
-    li img{
-        width: 25rem;
-        height: 22rem;
-    }
-
+    
     /*preguntas*/
     .preguntas{
         display: grid;
@@ -797,16 +781,16 @@ span.carousel-control-next-icon{
     .talles{
         display: flex;
         overflow: auto;
-        gap: 2rem;
-        margin:auto;
-        max-width: 25rem;
+        gap: 1rem;
+        margin: 0.5rem auto;
+        max-width: 28rem;
     }
     .tabla{
-        height: 25rem ;
-        width: 23rem;
+        height: 30rem ;
+        width: 28rem;
     }
-
 }
+
    /*Keyframes*/
 
    @keyframes tracking-in-contract {
