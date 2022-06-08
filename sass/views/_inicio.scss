@@ -1,0 +1,184 @@
+/*style-index*/
+.principal__index{
+    display: grid;
+    grid-template-areas:
+     "saludo saludo"
+     "productos tester"
+     "stars stars";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 4fr 1fr;
+    column-gap: $spacing-large;
+    row-gap: $spacing-medium;
+    padding: $spacing-small;
+    
+    
+    
+}
+.saludo{
+    grid-area: saludo;
+    background-color: $color-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding:$spacing-small;
+    border-radius: 12px;
+    border: $color-text 2pt solid;
+    &__title{
+    color: $color-primary;
+    }
+    &__content{
+    font-size: $text-medium;
+    color: $color-primary;
+    }
+}
+.index{
+    &__title a{
+        font-size: $text-base;
+        color: $color-text;        
+    }
+    &__productos{
+        grid-area: productos;
+        background-color: $color-article;
+        padding: $spacing-xsmall;
+        border-radius: 12px;
+        border: $color-text 2pt solid;
+        & img{
+            width: 15rem;
+            margin-right: $spacing-xsmall;
+            padding: .5rem 2rem;            
+        }
+        &__art{
+            background-color: $color-secondary ;
+            border-radius: 12px;
+            border: $color-text 2pt solid;   
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: $spacing-xsmall;
+            margin-bottom: $spacing-xsmall;     
+        
+            &__title{
+                font-size: $text-base;
+                color: $color-primary;
+                margin: 0 auto;  
+            }
+        }    
+
+    }
+    &__tester{
+        grid-area: tester;
+        background-color: $color-article;
+        padding: $spacing-xsmall;
+        border-radius: 12px;
+        border: $color-text 2pt solid;
+    
+        & img{
+            width: 25rem;
+            height: 20rem;
+            margin-right: $spacing-xsmall;
+        }
+
+        &__art{
+            background-color: $color-secondary ;
+            padding: $spacing-xsmall;
+            border-radius: 12px;
+            border: $color-text 2pt solid;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 10px;
+            &__title{
+                font-size: $text-base;
+                color: $color-primary;
+            }
+        }
+   
+    
+    }
+}
+.stars{
+    grid-area: stars;
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: $spacing-xsmall;
+    border-radius: 12px;
+    border: $color-text 2pt solid;
+
+    & h2{
+        font-size: $text-small;
+    }
+    &__img{
+        height: 8rem;
+    }    
+}
+/*final-index*/
+
+@media screen and (max-width: 1024px) {
+     /*index*/
+    .index{
+        &__productos__art{
+        flex-direction: row;
+        justify-content: space-evenly;
+        } 
+        &__productos .button{
+            display: none;
+        } 
+        &__tester .button{
+        display: none;
+        }
+    }
+    .stars__img{
+        height: 6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+   
+  
+  
+    /*index*/
+
+    .principal__index{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: $spacing-small;
+    }
+  
+    
+    .button{
+        float: none;
+    }
+    .stars{
+       display:none; 
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /*index*/
+    .principal{
+        background-color: $color-primary;
+    }
+    
+    .saludo{
+        &__title{
+        font-size: $text-base;
+        }
+        &__content{
+            font-size: $text-small;
+        }
+    }    
+    .index__tester{
+        & img{
+            width:20rem;
+            height: 15rem;
+        }
+        &__art__title{
+        font-size: $text-xsmall;
+        }
+    }    
+}    

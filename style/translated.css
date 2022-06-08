@@ -180,6 +180,11 @@ span {
     flex-direction: column;
     justify-content: space-evenly;
     list-style-type: none; }
+  .footer-footer {
+    color: #f4772a;
+    font-size: 1.8em;
+    text-decoration: none;
+    transition: all .2s; }
   .footer__nav li:hover {
     text-decoration: 2px underline #F4772A; }
   .footer__marca {
@@ -188,14 +193,9 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: space-around; }
-    .footer__social a {
-      padding: 1.5rem; }
-
-.link-footer {
-  color: #f4772a;
-  font-size: 1.8em;
-  text-decoration: none;
-  transition: all .2s; }
+  .footer__social img {
+    height: 120%;
+    padding: 2rem; }
 
 .copyright {
   height: 1rem;
@@ -211,10 +211,10 @@ span {
   .footer {
     height: 25rem;
     flex-direction: column; }
-    .footer__nav {
-      font-size: 1em; }
-    .footer__social {
-      flex-direction: row; } }
+  __nav {
+    font-size: 1em; }
+  __social {
+    flex-direction: row; } }
 
 /*style-index*/
 .principal__index {

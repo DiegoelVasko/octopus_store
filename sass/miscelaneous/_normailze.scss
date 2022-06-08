@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+html{
+    font-size: 62.5%;
+}
+/*style-body*/
+body{
+    font-family: $font-principal;
+    font-variant: small-caps;
+}
+
+.principal{
+    background-image: url(../multimedia/main3.jpg);
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+h1{
+    color: $color-secondary;
+    font-weight: bolder;
+    font-size: $text-large;
+    text-align: center;
+    font-family: $font-h1;
+    padding: $spacing-large;
+    text-shadow: 5px 5px 10px $color-article;
+    animation: tracking-in-contract .8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+    
+
+}
+h2{
+    text-decoration-line: underline;
+    padding-bottom: $spacing-small;
+}
+h4{
+    text-decoration-line: underline;
+}
+span{
+    color: $color-text;
+}
+.button{
+    background-color: #414141;
+    font-size: $text-xsmall;
+    padding: 0.5rem ;
+    margin: $spacing-xsmall;
+    border-radius: 12px;
+    border: 2px solid #F4772A;
+    color: #c4c4c4;
+    float: right;   
+}
+@media screen and (max-width: 1024px) {
+    body{
+        font-size: .8em;
+        
+    }
+}
