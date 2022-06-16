@@ -5,7 +5,7 @@
     justify-content: space-evenly;
     align-items: center;
     height: 19rem;
-    background-color: $color-section;
+    background-color: map-get($colors, color-section);
     
     &__nav{
     display: flex;
@@ -19,12 +19,13 @@
         text-decoration : 2px underline #F4772A;
     }
     &__marca{
-        width: 30%;
+        width: 20%;
     }
     &__social {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        border: none;
 
         & a{
             padding: $spacing-small;         
@@ -32,18 +33,19 @@
     }   
 }
 .link-footer{    
-        color: $color-text;
-        font-size: $text-base;
+        color: map-get($colors, color-text);
+        font-size: map-get($text-size, text-base);
         text-decoration:none;
         transition: all .2s; }
 
 .copyright{
-    height: 1rem;
-    background-color: $color-section;
-    color: $color-primary;
+    height: 1.2rem;
+    background-color: map-get($colors, color-section);
+    color: map-get($colors, color-primary);
     font-family: $font-secondary;
     animation: traslate 15s infinite ease-in-out  0s ;
     overflow: hidden;
+    
 }
 /*final-footer*/
 @media screen and (max-width: 480px) {
@@ -53,9 +55,10 @@
         flex-direction: column;
     
         &__nav{
-            font-size: $text-xsmall;
+            font-size: map-get($text-size, text-xsmall);
         }
         &__social{
+            display: flex;
             flex-direction: row;
         }   
     }

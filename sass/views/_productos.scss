@@ -7,14 +7,10 @@
 }
 .calzado{
     width: 92%;
-    background-color: $color-secondary;
-    padding: $spacing-xsmall;
-    margin: 0.5rem auto 0;
-    
-    border-radius: 12px;
-    border: $color-text 2pt solid;
-    color: $color-primary;
-    font-size: $text-base;
+    background-color: map-get($colors, color-secondary);
+    @include spacing(0.5rem auto 0, $spacing-xsmall);
+    color: map-get($colors, color-primary);
+    font-size: map-get($text-size, text-base);
     animation: fade-in-bottom 1s 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     
     & h2 {

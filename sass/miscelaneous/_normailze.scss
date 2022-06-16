@@ -20,13 +20,13 @@ body{
     background-attachment: fixed;
 }
 h1{
-    color: $color-secondary;
+    color: map-get($colors, color-secondary);
     font-weight: bolder;
-    font-size: $text-large;
+    font-size: map-get($text-size, text-large);
     text-align: center;
     font-family: $font-h1;
     padding: $spacing-large;
-    text-shadow: 5px 5px 10px $color-article;
+    text-shadow: 5px 5px 10px map-get($colors, color-article);
     animation: tracking-in-contract .8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
     
 
@@ -39,18 +39,21 @@ h4{
     text-decoration-line: underline;
 }
 span{
-    color: $color-text;
+    color: map-get($colors, color-text);
+}
+article{
+    border-radius: 12px;
+    border: map-get($colors, color-text) 2pt solid;
 }
 .button{
     background-color: #414141;
-    font-size: $text-xsmall;
-    padding: 0.5rem ;
-    margin: $spacing-xsmall;
-    border-radius: 12px;
-    border: 2px solid #F4772A;
+    font-size: map-get($text-size, text-xsmall);
+    @include spacing($spacing-xsmall, 0.5rem);
+    @extend article;
     color: #c4c4c4;
     float: right;   
 }
+
 @media screen and (max-width: 1024px) {
     body{
         font-size: .8em;

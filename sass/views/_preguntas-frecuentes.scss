@@ -30,13 +30,10 @@
     }
     & article{
         
-        background-color: $color-secondary;
-        padding: $spacing-xsmall;
-        margin: $spacing-xsmall;
-        border-radius: 12px;
-        border: $color-text 2pt solid;
-        color: $color-primary;
-        font-size: $text-base;
+        background-color: map-get($colors, color-secondary);
+        @include spacing($spacing-xsmall, $spacing-xsmall);
+        color: map-get($colors, color-primary);
+        font-size: map-get($text-size, text-base);
     
     }
 }
@@ -47,8 +44,7 @@
     max-height: 100rem;
 }
 .tabla{
-    height: 35rem ;
-    width: 35rem;   
+    width: 100%;
 }
 /*final-estilo-preguntas*/
 

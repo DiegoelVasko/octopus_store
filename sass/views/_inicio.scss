@@ -16,41 +16,39 @@
 }
 .saludo{
     grid-area: saludo;
-    background-color: $color-secondary;
+    background-color: map-get($colors, color-secondary);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding:$spacing-small;
-    border-radius: 12px;
-    border: $color-text 2pt solid;
+    /*border-radius: 12px;
+    border: map-get($colors, color-text) 2pt solid*/
+    @extend article;
     &__title{
-    color: $color-primary;
+    color: map-get($colors, color-primary);
     }
     &__content{
-    font-size: $text-medium;
-    color: $color-primary;
+    font-size: map-get($text-size, text-medium);
+    color: map-get($colors, color-primary);
     }
 }
 .index{
     &__title a{
-        font-size: $text-base;
-        color: $color-text;        
+        font-size: map-get($text-size, text-base);
+        color: map-get($colors, color-text);        
     }
     &__productos{
         grid-area: productos;
-        background-color: $color-article;
+        background-color: map-get($colors, color-article);
         padding: $spacing-xsmall;
-        border-radius: 12px;
-        border: $color-text 2pt solid;
+        @extend article;
         & img{
             width: 15rem;
             margin-right: $spacing-xsmall;
             padding: .5rem 2rem;            
         }
         &__art{
-            background-color: $color-secondary ;
-            border-radius: 12px;
-            border: $color-text 2pt solid;   
+            background-color: map-get($colors, color-secondary) ;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -58,8 +56,8 @@
             margin-bottom: $spacing-xsmall;     
         
             &__title{
-                font-size: $text-base;
-                color: $color-primary;
+                font-size: map-get($text-size, text-base);
+                color: map-get($colors, color-primary);
                 margin: 0 auto;  
             }
         }    
@@ -67,10 +65,9 @@
     }
     &__tester{
         grid-area: tester;
-        background-color: $color-article;
+        background-color: map-get($colors, color-article);
         padding: $spacing-xsmall;
-        border-radius: 12px;
-        border: $color-text 2pt solid;
+        @extend article;
     
         & img{
             width: 25rem;
@@ -79,17 +76,14 @@
         }
 
         &__art{
-            background-color: $color-secondary ;
-            padding: $spacing-xsmall;
-            border-radius: 12px;
-            border: $color-text 2pt solid;
+            background-color: map-get($colors, color-secondary) ;
             display: flex;
             flex-direction: row;
             align-items: center;
-            margin: 10px;
+            @include spacing( 10px, $spacing-xsmall,);
             &__title{
-                font-size: $text-base;
-                color: $color-primary;
+                font-size: map-get($text-size, text-base);
+                color: map-get($colors, color-primary);
             }
         }
    
@@ -98,17 +92,16 @@
 }
 .stars{
     grid-area: stars;
-    background-color: $color-primary;
+    background-color: map-get($colors, color-primary);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding: $spacing-xsmall;
-    border-radius: 12px;
-    border: $color-text 2pt solid;
+    @extend article;
 
     & h2{
-        font-size: $text-small;
+        font-size: map-get($text-size, text-small);
     }
     &__img{
         height: 8rem;
@@ -161,15 +154,15 @@
 @media screen and (max-width: 480px) {
     /*index*/
     .principal{
-        background-color: $color-primary;
+        background-color: map-get($colors, color-primary);
     }
     
     .saludo{
         &__title{
-        font-size: $text-base;
+        font-size: map-get($text-size, text-base);
         }
         &__content{
-            font-size: $text-small;
+            font-size: map-get($text-size, text-small);
         }
     }    
     .index__tester{
@@ -177,8 +170,14 @@
             width:20rem;
             height: 15rem;
         }
+        &__art{
+            display: flex;
+            flex-direction: column;
+            
+        }
         &__art__title{
-        font-size: $text-xsmall;
+        font-size: map-get($text-size, text-xsmall);
+        padding-top: $spacing-xsmall;
         }
     }    
 }    

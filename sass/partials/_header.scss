@@ -38,12 +38,12 @@
           );*/
     }
     #offcanvasNavbar{
-        background-color: $color-article
+        background-color: map-get($colors, color-article)
     }
     .offcanvas-title{
-        color: $color-secondary;
+        color: map-get($colors, color-secondary);
         text-decoration: none;
-        font-size: $text-medium;
+        font-size: map-get($text-size, text-medium);
         line-height: 0.5rem;
     }
     
@@ -57,8 +57,8 @@
         margin: 0 auto;
     }
     .menu__li a{
-        font-size: $text-medium;
-        color: $color-primary;
+        font-size: map-get($text-size, text-medium);
+        color: map-get($colors, color-primary);
     }   
     
     .social img{
