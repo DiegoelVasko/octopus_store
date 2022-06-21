@@ -332,7 +332,7 @@ article, .button, .saludo, .index__productos, .index__tester, .stars, .card-body
 .slider {
   width: 95%;
   display: flex;
-  animation: slider 20s linear infinite; }
+  animation: slider 60s linear infinite; }
   .slider img {
     height: 25rem;
     margin: 1rem 3rem; }
