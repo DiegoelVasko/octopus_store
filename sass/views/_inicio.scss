@@ -3,10 +3,10 @@
     display: grid;
     grid-template-areas:
      "saludo saludo"
-     "productos tester"
-     "stars stars";
+     "stars stars"
+     "productos tester";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 4fr 1fr;
+    grid-template-rows: repeat(auto)  ;
     column-gap: $spacing-large;
     row-gap: $spacing-medium;
     padding: $spacing-small;
@@ -21,8 +21,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     padding:$spacing-small;
-    /*border-radius: 12px;
-    border: map-get($colors, color-text) 2pt solid*/
+    
     @extend article;
     &__title{
     color: map-get($colors, color-primary);
@@ -91,26 +90,30 @@
     }
 }
 .stars{
+    background-color: map-get($colors, color-article);
     grid-area: stars;
-    background-color: map-get($colors, color-primary);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: $spacing-xsmall;
-    @extend article;
-
-    & h2{
-        font-size: map-get($text-size, text-small);
+    overflow: hidden;
+    @extend article;  
+    
+}
+.slider{
+    width: 95%;
+    display: flex;
+    animation: slider 20s linear infinite;
+    & img{
+        height: 25rem;
+        margin: $spacing-xsmall $spacing-large;
     }
-    &__img{
-        height: 8rem;
-    }    
+        
 }
 /*final-index*/
 
 @media screen and (max-width: 1024px) {
-     /*index*/
+     
     .index{
         &__productos__art{
         flex-direction: row;
@@ -123,16 +126,19 @@
         display: none;
         }
     }
-    .stars__img{
-        height: 6rem;
-    }
+    .slider{
+        width: 95%;
+        display: flex;
+        animation: slider1024px 45s linear infinite;
+        & img{
+            height: 25rem;
+            margin: $spacing-xsmall $spacing-large;
+        }
+    }    
 }
 
 @media screen and (max-width: 768px) {
-   
-  
-  
-    /*index*/
+     
 
     .principal__index{
         display:flex;
@@ -145,10 +151,16 @@
     .button{
         float: none;
     }
-    .stars{
-       display:none; 
-
-    }
+    .slider{
+        width: 95%;
+        display: flex;
+        animation: slider768px 30s linear infinite;
+        & img{
+            height: 10rem;
+            margin: $spacing-xsmall $spacing-large;
+        }
+    }    
+   
 }
 
 @media screen and (max-width: 480px) {
@@ -179,5 +191,8 @@
         font-size: map-get($text-size, text-xsmall);
         padding-top: $spacing-xsmall;
         }
+    }
+    .stars{
+        display: none;
     }    
 }    

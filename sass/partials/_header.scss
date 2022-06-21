@@ -23,19 +23,6 @@
         width: 4rem;
         margin-right: 3rem;
         background-image: url(../multimedia/menu-burger-icon.svg);
-        /*background-image: linear-gradient(
-            100deg,
-            hsl(4deg 85% 57%) 0%,
-            hsl(9deg 88% 58%) 11%,
-            hsl(14deg 90% 58%) 22%,
-            hsl(18deg 92% 58%) 33%,
-            hsl(21deg 93% 58%) 44%,
-            hsl(25deg 94% 58%) 56%,
-            hsl(28deg 95% 59%) 67%,
-            hsl(31deg 96% 60%) 78%,
-            hsl(33deg 96% 61%) 89%,
-            hsl(36deg 96% 62%) 100%
-          );*/
     }
     #offcanvasNavbar{
         background-color: map-get($colors, color-article)
