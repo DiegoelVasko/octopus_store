@@ -2,3 +2,7 @@
     margin: $margin;
     padding: $padding;
 }
+@mixin grids ($column, $row){
+    grid-column: $column;
+    grid-row: $row;
+}

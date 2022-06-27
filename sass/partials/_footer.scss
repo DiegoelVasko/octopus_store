@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    height: 19rem;
+    height: 15rem;
     background-color: map-get($colors, color-section);
     
     &__nav{
@@ -43,7 +43,7 @@
     background-color: map-get($colors, color-section);
     color: map-get($colors, color-primary);
     font-family: $font-secondary;
-    animation: traslate 15s infinite ease-in-out  0s ;
+    animation: traslate 30s infinite linear  0s ;
     overflow: hidden;
     
 }
