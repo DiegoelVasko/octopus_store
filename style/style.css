@@ -256,9 +256,7 @@ article, .button, .saludo, .index__productos, .index__tester, .stars, .card-body
 /*style-index*/
 .principal__index {
   display: grid;
-  grid-template-areas: "saludo saludo"
- "productos tester"
- "stars stars";
+  grid-template-areas: "saludo saludo" "productos tester" "stars stars";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 4fr 1fr;
   column-gap: 3rem;
@@ -318,9 +316,7 @@ article, .button, .saludo, .index__productos, .index__tester, .stars, .card-body
     flex-direction: row;
     align-items: center;
     margin: 10px;
-    padding: 1rem;
-    /*padding: $spacing-xsmall;
-            margin: 10px;*/ }
+    padding: 1rem; }
     .index__tester__art__title {
       font-size: 1.8em;
       color: #acbfa4; }
@@ -392,8 +388,6 @@ article, .button, .saludo, .index__productos, .index__tester, .stars, .card-body
   background-color: #177e89e6;
   margin: 0.5rem auto 0;
   padding: 1rem;
-  /*padding: $spacing-xsmall;
-    margin: 0.5rem auto 0;*/
   color: #acbfa4;
   font-size: 1.8em;
   animation: fade-in-bottom 1s 1s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
@@ -442,8 +436,6 @@ span.carousel-control-next-icon {
   flex-direction: row;
   margin: 1rem;
   padding: 1rem;
-  /*padding: $spacing-xsmall;
-    margin: $spacing-small;*/
   background-color: #177e89e6; }
   .tester__content {
     padding: 1.5rem;
@@ -476,11 +468,7 @@ span.carousel-control-next-icon {
 /*estilo-preguntas*/
 .preguntas {
   display: grid;
-  grid-template-areas: "titulo titulo titulo"
- "compra compra talles"
- "pagos envio talles"
- "cambios cambios talles" 
- "cambios cambios talles";
+  grid-template-areas: "titulo titulo titulo" "compra compra talles" "pagos envio talles" "cambios cambios talles"  "cambios cambios talles";
   animation: fade-in-bottom 1s 1s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
   .preguntas__compra {
     grid-area: compra; }
@@ -498,8 +486,6 @@ span.carousel-control-next-icon {
     background-color: #177e89e6;
     margin: 1rem;
     padding: 1rem;
-    /*padding: $spacing-xsmall;
-        margin: $spacing-xsmall;*/
     color: #acbfa4;
     font-size: 1.8em; }
 
@@ -519,11 +505,7 @@ span.carousel-control-next-icon {
   /*preguntas*/
   .preguntas {
     display: grid;
-    grid-template-areas: "titulo titulo "
- "compra compra "
- "pagos envio "
- "cambios cambios " 
- "talles talles "; }
+    grid-template-areas: "titulo titulo " "compra compra " "pagos envio " "cambios cambios "  "talles talles "; }
   .talles {
     display: flex;
     overflow: auto;
@@ -563,9 +545,7 @@ span.carousel-control-next-icon {
   background-color: #177e89e6;
   color: #acbfa4;
   margin: 2rem;
-  padding: 1rem;
-  /*padding: $spacing-xsmall;
-    margin: $spacing-medium 0;*/ }
+  padding: 1rem; }
 
 .formulario {
   animation: fade-in-bottom 1s 1s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
@@ -586,8 +566,6 @@ form {
 .form__item {
   margin: 1.5rem;
   padding: 1rem;
-  /*padding: $spacing-xsmall ;
-    margin: $spacing-small;*/
   background-color: #177e89e6;
   color: #acbfa4; }
   .form__item:nth-of-type(1) {
