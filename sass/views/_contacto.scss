@@ -48,8 +48,6 @@ form{
     flex-direction: column;
     
     & label{
-    grid-column: 1 / 3;
-    grid-row: 4 / 5;
     color: map-get($colors, color-primary);
     font-size: map-get($text-size, text-xsmall)
     }

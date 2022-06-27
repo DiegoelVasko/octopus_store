@@ -4,26 +4,28 @@
         flex-direction: row;
         justify-content: space-between;
         &__logo{
-        width: 20%;
-        margin: 1rem 5rem;
+        width: 10%;
+        margin: .5rem 5rem;
         }
     }
     .navbar{    
-        background-image: url(../multimedia/fondo_header1.svg);
+        background-image: url(../multimedia/fondo_header.jpg);
         opacity: 1;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-              
+        &-toggler{
+            margin-right: $spacing-large;
+            &-icon{
+                height: 3rem;
+                width: 4rem;
+                background-image: url(../multimedia/menu-burger-icon.svg);
+            }
+        }      
     }
         
-    .navbar-toggler-icon{
-        height: 3rem;
-        width: 4rem;
-        margin-right: 3rem;
-        background-image: url(../multimedia/menu-burger-icon.svg);
-    }
+    
     #offcanvasNavbar{
         background-color: map-get($colors, color-article)
     }
