@@ -12,8 +12,7 @@
     animation: fade-in-right 1s ease-in-out 0.8s both;
     display: grid;
     grid-template-columns: 30% 70%;
-    align-items: center;
-    
+    align-items: flex-start;
    
     & h2 {
         font-weight: bolder;
@@ -52,10 +51,14 @@ span.carousel-control-next-icon{
        align-items: flex-start;
     }
 }
-@media screen and (max-width: 480px) {    
+@media screen and (max-width: 768px) {    
     
     .calzado{
         display: block;
         
     }
-}  
+    .carousel-inner{
+        width: 100%;
+        margin: 0 auto;
+    }
+}

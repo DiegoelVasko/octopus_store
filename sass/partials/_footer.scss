@@ -12,12 +12,14 @@
     flex-direction: column;
     justify-content: space-evenly;
     list-style-type: none;
+        & li:hover{
+            color: map-get($colors, color-text);
+            text-decoration : 2px underline #F4772A;
+        }
     }   
     
    
-    &__nav li:hover{
-        text-decoration : 2px underline #F4772A;
-    }
+    
     &__marca{
         width: 20%;
     }

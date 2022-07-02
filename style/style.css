@@ -74,7 +74,7 @@ h4 {
 span {
   color: #f4772a; }
 
-article, .button, .saludo, .index__productos, .index__tester, .card-body, .form__item, #tipo_consulta, #message {
+article, .button, .saludo, .index__productos, .index__tester, .contacto__info__data, .form__item, #tipo_consulta, #message {
   border-radius: 12px;
   border: #f4772a 2pt solid; }
 
@@ -138,13 +138,13 @@ article, .button, .saludo, .index__productos, .index__tester, .card-body, .form_
   0% {
     transform: translateX(0); }
   100% {
-    transform: translateX(-340%); } }
+    transform: translateX(-248%); } }
 
 @keyframes slider768px {
   0% {
     transform: translateX(0); }
   100% {
-    transform: translateX(-246%); } }
+    transform: translateX(-284%); } }
 
 @keyframes slide-in-bck-center {
   0% {
@@ -273,7 +273,7 @@ article, .button, .saludo, .index__productos, .index__tester, .card-body, .form_
   flex-direction: row;
   justify-content: space-between; }
   .header__logo {
-    width: 10%;
+    width: 15%;
     margin: .5rem 5rem; }
 
 .navbar {
@@ -281,7 +281,7 @@ article, .button, .saludo, .index__productos, .index__tester, .card-body, .form_
   opacity: 1;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  /*background-size: cover;*/
   position: relative; }
   .navbar-toggler {
     margin-right: 3rem; }
@@ -312,8 +312,8 @@ article, .button, .saludo, .index__productos, .index__tester, .card-body, .form_
   color: #acbfa4; }
 
 .social img {
-  width: 30%;
-  height: 30%;
+  width: 20%;
+  height: 20%;
   padding: 2rem; }
 
 /*fin-header*/
@@ -337,8 +337,9 @@ article, .button, .saludo, .index__productos, .index__tester, .card-body, .form_
     flex-direction: column;
     justify-content: space-evenly;
     list-style-type: none; }
-  .footer__nav li:hover {
-    text-decoration: 2px underline #F4772A; }
+    .footer__nav li:hover {
+      color: #f4772a;
+      text-decoration: 2px underline #F4772A; }
   .footer__marca {
     width: 20%; }
   .footer__social {
@@ -381,34 +382,24 @@ article, .button, .saludo, .index__productos, .index__tester, .card-body, .form_
   margin: auto;
   padding: 1.5rem;
   display: flex;
-  flex-direction: column;
-  /*grid-template-areas:
-     "saludo saludo"
-     "stars stars"
-     "productos tester";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(auto)  ;
-    column-gap: $spacing-large;
-    row-gap: $spacing-medium;*/ }
+  flex-direction: column; }
 
 .saludo {
   background-color: #177e89e6;
   display: flex;
   flex-direction: row;
   padding: 1.5rem; }
-  .saludo div {
-    width: 55%; }
   .saludo__title {
     color: #acbfa4;
     animation: none; }
   .saludo__content {
-    font-size: 3.2em;
+    font-size: 1.8em;
     color: #acbfa4;
     margin: 2rem;
     text-align: center; }
 
 .estrellas {
-  width: 50%;
+  width: 90%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(10, 1fr); }
@@ -499,10 +490,9 @@ article, .button, .saludo, .index__productos, .index__tester, .card-body, .form_
 .index__tester {
   background-color: #414141cc;
   padding: 1rem; }
-  .index__tester img {
-    width: 25rem;
-    height: 20rem;
-    margin-right: 1rem; }
+  .index__tester div {
+    display: flex;
+    flex-direction: row; }
   .index__tester__art {
     background-color: #177e89e6;
     display: flex;
@@ -513,25 +503,25 @@ article, .button, .saludo, .index__productos, .index__tester, .card-body, .form_
     .index__tester__art__title {
       font-size: 1.8em;
       color: #acbfa4; }
+    .index__tester__art img {
+      width: 25rem;
+      height: 20rem;
+      margin-right: 1rem; }
 
 /*final-index*/
 @media screen and (max-width: 1024px) {
   .index__productos__art {
     flex-direction: row;
     justify-content: space-evenly; }
-  .index__productos .button {
-    display: none; }
-  .index__tester .button {
-    display: none; }
-  /*.slider{
-        width: 95%;
-        display: flex;
-        animation: slider1024px 45s linear infinite;
-        & img{
-            height: 25rem;
-            margin: $spacing-xsmall $spacing-large;
-        }
-    }   */ }
+  .index__productos .slider {
+    animation: slider1024px 30s linear infinite; }
+    .index__productos .slider img {
+      height: 15rem; } }
+
+@media screen and (max-width: 830px) {
+  .index__tester__art {
+    display: flex;
+    flex-direction: column; } }
 
 @media screen and (max-width: 768px) {
   .principal__index {
@@ -539,18 +529,30 @@ article, .button, .saludo, .index__productos, .index__tester, .card-body, .form_
     flex-direction: column;
     justify-content: space-around;
     padding: 1.5rem; }
+  .saludo__title {
+    padding: 1rem; }
+  .saludo__content {
+    margin: 1rem; }
   .button {
     float: none; }
-  /*.slider{
-        width: 95%;
-        display: flex;
-        animation: slider768px 30s linear infinite;
-        & img{
-            height: 10rem;
-            margin: $spacing-xsmall $spacing-large;
-        }
-    }    
-   */ }
+  .index__productos .slider {
+    animation: slider768px 30s linear infinite; }
+    .index__productos .slider img {
+      height: 10rem;
+      margin: 1rem 3rem; }
+  .index__tester div {
+    justify-content: space-around; }
+  .index__tester__art__title {
+    font-size: 1em;
+    padding-top: 1rem; } }
+
+@media screen and (max-width: 700px) {
+  .saludo__title {
+    padding: none; }
+  .saludo__content {
+    margin: none; }
+  .estrellas {
+    display: none; } }
 
 @media screen and (max-width: 480px) {
   /*index*/
@@ -563,15 +565,12 @@ article, .button, .saludo, .index__productos, .index__tester, .card-body, .form_
   .index__tester img {
     width: 20rem;
     height: 15rem; }
-  .index__tester__art {
+  .index__tester div {
     display: flex;
     flex-direction: column; }
   .index__tester__art__title {
     font-size: 1em;
-    padding-top: 1rem; }
-  /*.stars{
-        display: none;
-    }    */ }
+    padding-top: 1rem; } }
 
 /*estilo-productos*/
 .productos {
@@ -587,7 +586,7 @@ article, .button, .saludo, .index__productos, .index__tester, .card-body, .form_
   animation: fade-in-right 1s ease-in-out 0.8s both;
   display: grid;
   grid-template-columns: 30% 70%;
-  align-items: center; }
+  align-items: flex-start; }
   .calzado h2 {
     font-weight: bolder;
     font-style: italic;
@@ -617,9 +616,12 @@ span.carousel-control-next-icon {
   .calzado {
     align-items: flex-start; } }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .calzado {
-    display: block; } }
+    display: block; }
+  .carousel-inner {
+    width: 100%;
+    margin: 0 auto; } }
 
 /*estilo-tester*/
 .shoetester {
@@ -646,7 +648,10 @@ span.carousel-control-next-icon {
       font-weight: bolder; }
 
 .card {
-  background-color: #177e89e6; }
+  background-color: #177e89e6;
+  border: none; }
+  .card-img-top {
+    height: 40rem; }
 
 /*final-estilo-tester*/
 @media screen and (max-width: 768px) {
@@ -659,9 +664,8 @@ span.carousel-control-next-icon {
       font-size: 1.4em; }
     .tester__content p {
       display: none; }
-  iframe {
-    width: 100%;
-    height: 100%; } }
+  .card-img-top {
+    height: 30rem; } }
 
 /*estilo-preguntas*/
 .preguntas {
@@ -680,7 +684,7 @@ span.carousel-control-next-icon {
     grid-area: cambios; }
   .preguntas h1 {
     grid-area: titulo; }
-  .preguntas article, .preguntas .button, .preguntas .saludo, .preguntas .index__productos, .preguntas .index__tester, .preguntas .card-body, .preguntas .form__item, .preguntas #tipo_consulta, .preguntas #message {
+  .preguntas article, .preguntas .button, .preguntas .saludo, .preguntas .index__productos, .preguntas .index__tester, .preguntas .contacto__info__data, .preguntas .form__item, .preguntas #tipo_consulta, .preguntas #message {
     background-color: #177e89e6;
     margin: 1rem;
     padding: 1rem;
@@ -719,41 +723,36 @@ span.carousel-control-next-icon {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 3rem; }
-  .contacto article, .contacto .button, .contacto .saludo, .contacto .index__productos, .contacto .index__tester, .contacto .card-body, .contacto .form__item, .contacto #tipo_consulta, .contacto #message {
+  .contacto article, .contacto .button, .contacto .saludo, .contacto .index__productos, .contacto .index__tester, .contacto .contacto__info__data, .contacto .form__item, .contacto #tipo_consulta, .contacto #message {
     background-color: #177e89e6;
     padding: 1rem;
-    color: #acbfa4;
-    font-size: 1.8em; }
+    color: #acbfa4; }
   .contacto__info {
     height: fit-content;
     animation: fade-in-bottom 1s 1s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
-    .contacto__info h3 {
-      margin: 2rem;
-      color: #c4c4c499;
-      text-decoration: underline; }
-    .contacto__info p {
-      margin: 2rem 3rem; }
-
-.card {
-  --bs-card-border-color:none; }
-
-.card-body {
-  background-color: #177e89e6;
-  color: #acbfa4;
-  margin: 2rem;
-  padding: 1rem; }
+    .contacto__info__title {
+      font-size: 4.8em; }
+    .contacto__info__data {
+      margin-top: 1.5rem; }
+      .contacto__info__data h3 {
+        margin: 2rem;
+        color: #c4c4c499;
+        text-decoration: underline; }
+      .contacto__info__data p {
+        margin: 2rem 3rem;
+        font-size: 3.2em; }
 
 .formulario {
   animation: fade-in-bottom 1s 1s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
 
 form {
+  font-size: 1.8em;
   display: flex;
   flex-direction: column; }
   form label {
-    color: #acbfa4;
-    font-size: 1em; }
+    color: #acbfa4; }
 
 .form__item {
   margin: 1.5rem;
@@ -769,7 +768,6 @@ form {
 #tipo_consulta {
   background-color: #177e89e6;
   color: #acbfa4;
-  font-size: 0.5em;
   font-family: 'Signika', sans-serif; }
 
 #message {
@@ -789,15 +787,13 @@ form {
   .contacto {
     justify-content: space-around;
     padding: 2rem; }
-    .contacto article, .contacto .button, .contacto .saludo, .contacto .index__productos, .contacto .index__tester, .contacto .card-body, .contacto .form__item, .contacto #tipo_consulta, .contacto #message {
+    .contacto article, .contacto .button, .contacto .saludo, .contacto .index__productos, .contacto .index__tester, .contacto .contacto__info__data, .contacto .form__item, .contacto #tipo_consulta, .contacto #message {
       margin-top: 1.5rem; }
     .contacto__info h3 {
       margin: 2rem;
-      font-size: .8em;
       text-decoration: underline; }
     .contacto__info p {
-      margin: 2rem;
-      font-size: .5em; } }
+      margin: 2rem; } }
 
 @media screen and (max-width: 480px) {
   /*contacto*/
@@ -806,11 +802,12 @@ form {
     flex-direction: column;
     justify-content: space-around;
     padding: 2rem; }
-    .contacto article, .contacto .button, .contacto .saludo, .contacto .index__productos, .contacto .index__tester, .contacto .card-body, .contacto .form__item, .contacto #tipo_consulta, .contacto #message {
+    .contacto article, .contacto .button, .contacto .saludo, .contacto .index__productos, .contacto .index__tester, .contacto .contacto__info__data, .contacto .form__item, .contacto #tipo_consulta, .contacto #message {
       margin-top: 1.5rem; }
     .contacto__info h3 {
       margin: 2rem;
       color: #c4c4c499;
       text-decoration: underline; }
-    .contacto__info p {
-      margin: 2rem; } }
+    .contacto__info__data p {
+      margin: 0 auto;
+      font-size: 1.8em; } }

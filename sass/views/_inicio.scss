@@ -4,18 +4,6 @@
     @include spacing (auto,$spacing-small);
     display: flex;
     flex-direction: column;
-    /*grid-template-areas:
-     "saludo saludo"
-     "stars stars"
-     "productos tester";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(auto)  ;
-    column-gap: $spacing-large;
-    row-gap: $spacing-medium;*/
-    
-    
-    
-    
 }
 .saludo{
     background-color: map-get($colors, color-secondary);
@@ -23,22 +11,21 @@
     flex-direction: row;
     padding: $spacing-small;
     @extend article;
-    & div{
-        width: 55%;
-    }
+    
     &__title{
     color: map-get($colors, color-primary);
     animation: none;
     }
     &__content{
-    font-size: map-get($text-size, text-medium);
+    font-size: map-get($text-size, text-base);
     color: map-get($colors, color-primary);
     margin: $spacing-medium;
     text-align: center;
     }
 }
     .estrellas{
-        width: 50%;
+        width: 90%;
+        
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(10, 1fr);
@@ -151,13 +138,10 @@
         background-color: map-get($colors, color-article);
         padding: $spacing-xsmall;
         @extend article;
-    
-        & img{
-            width: 25rem;
-            height: 20rem;
-            margin-right: $spacing-xsmall;
+        & div{
+            display: flex;
+            flex-direction: row;
         }
-
         &__art{
             background-color: map-get($colors, color-secondary) ;
             display: flex;
@@ -168,64 +152,92 @@
                 font-size: map-get($text-size, text-base);
                 color: map-get($colors, color-primary);
             }
+            & img{
+            width: 25rem;
+            height: 20rem;
+            margin-right: $spacing-xsmall;
+            }
         }
-   
-    
     }
 }
 /*final-index*/
 
 @media screen and (max-width: 1024px) {
-     
     .index{
-        &__productos__art{
-        flex-direction: row;
-        justify-content: space-evenly;
-        } 
-        &__productos .button{
-            display: none;
-        } 
-        &__tester .button{
-        display: none;
-        }
+        &__productos{
+            &__art{
+                flex-direction: row;
+                justify-content: space-evenly;
+                }
+            & .slider{
+                animation: slider1024px 30s linear infinite;
+                & img{
+                    height: 15rem;
+                }    
+            }
+    
+        }      
     }
-    /*.slider{
-        width: 95%;
-        display: flex;
-        animation: slider1024px 45s linear infinite;
-        & img{
-            height: 25rem;
-            margin: $spacing-xsmall $spacing-large;
-        }
-    }   */ 
 }
-
+@media screen and (max-width: 830px) {
+    .index__tester__art{
+        display: flex;
+        flex-direction: column; 
+    }
+}
 @media screen and (max-width: 768px) {
-     
-
     .principal__index{
         display:flex;
         flex-direction: column;
         justify-content: space-around;
         padding: $spacing-small;
     }
-  
-    
+    .saludo{
+        &__title{
+            padding: $spacing-xsmall;    
+        }
+        &__content{
+            margin: $spacing-xsmall;
+        }
+    }
     .button{
         float: none;
     }
-    /*.slider{
-        width: 95%;
-        display: flex;
+    .index__productos{
+        & .slider{    
         animation: slider768px 30s linear infinite;
-        & img{
-            height: 10rem;
-            margin: $spacing-xsmall $spacing-large;
+            & img{
+                height: 10rem;
+                margin: $spacing-xsmall $spacing-large;
+            }
         }
-    }    
-   */
-}
+    } 
+    .index__tester{
+        
+        & div{
+            justify-content: space-around;           
+        }
 
+        &__art__title{
+        font-size: map-get($text-size, text-xsmall);
+        padding-top: $spacing-xsmall;
+        }
+    }   
+   
+}
+@media screen and (max-width: 700px) {
+    .saludo{
+        &__title{
+            padding: none;    
+        }
+        &__content{
+            margin: none;
+        }
+    }
+    .estrellas{
+        display:none;
+    }    
+}
 @media screen and (max-width: 480px) {
     /*index*/
     .principal{
@@ -245,7 +257,7 @@
             width:20rem;
             height: 15rem;
         }
-        &__art{
+        & div{
             display: flex;
             flex-direction: column;
             
@@ -255,7 +267,4 @@
         padding-top: $spacing-xsmall;
         }
     }
-   /*.stars{
-        display: none;
-    }    */
 }    

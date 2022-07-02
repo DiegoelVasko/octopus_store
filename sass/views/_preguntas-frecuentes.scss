@@ -34,12 +34,11 @@
         @include spacing($spacing-xsmall, $spacing-xsmall);
         color: map-get($colors, color-primary);
         font-size: map-get($text-size, text-base);
-    
+        
     }
 }
 
-.talles{
-       
+.talles{       
     overflow: auto;
     max-height: 100rem;
 }
@@ -64,7 +63,7 @@
          "compra compra "
          "pagos envio "
          "cambios cambios " 
-         "talles talles "
+         "talles talles ";
     }
     .talles{
         display: flex;
@@ -77,4 +76,5 @@
         height: 30rem ;
         width: 28rem;
     }
+    
 }

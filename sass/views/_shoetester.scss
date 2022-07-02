@@ -29,29 +29,32 @@
 }
 .card{
     background-color: map-get($colors, color-secondary);
+    border: none;
+    &-img-top{
+        height: 40rem;
+    }
+}
 
-}  
 /*final-estilo-tester*/
 
 @media screen and (max-width: 768px) {
-.shoetester{
-    display: flex;
-    flex-direction: column;
-    
-}
-.tester{
-    display: block;
+    .shoetester{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .tester{
+        display: block;
 
-    &__h2{
-        font-size: map-get($text-size, text-small);
-    }
-    
-    &__content p{
-        display: none;
-    }
-} 
-iframe{
-    width: 100%;
-    height: 100%;
+        &__h2{
+            font-size: map-get($text-size, text-small);
+        }
+        
+        &__content p{
+            display: none;
+        }
+    } 
+    .card-img-top{
+        height: 30rem;
 }
 }
